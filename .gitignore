@@ -1,0 +1,17 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+.DS_Store
+.rspec
+.rspec_status
+.ruby-gemset
+.ruby-version
+.travis.yml
+lib/config.rb
+bin/test
