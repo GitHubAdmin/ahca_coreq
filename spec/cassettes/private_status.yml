@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ltctt.ahcancal.org/api/status?FileUploadRequestId=UbCtGLsSnVgo0qpDB_v-sQ==
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin18.5.0 x86_64) ruby/2.5.5p157
+      Authorization:
+      - Basic FAKE_AUTHORIZATION
+      Host:
+      - ltctt.ahcancal.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache="set-cookie"
+      - private
+      Content-Disposition:
+      - attachment; filename=UbCtGLsSnVgo0qpDB_v-sQ==_error.csv
+      Content-Type:
+      - application/csv
+      Date:
+      - Thu, 13 Jun 2019 14:16:02 GMT
+      Expires:
+      - '0'
+      Fileuploadfilename:
+      - Sample_CoreQ_SS_upload.csv
+      Fileuploadrequestid:
+      - UbCtGLsSnVgo0qpDB_v-sQ==
+      Pragma:
+      - Public
+      Responsecode:
+      - ERROR
+      Responsedescription:
+      - File upload failed. Error details are available in the response.
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - AWSELB=BD75795F147148E52174EB2B2AA75585A537FC16EACD345E31BFF1CBBFB03C76CA3CB27AC7868C3EE1AE58D447EC6C69EDBCB4D4C403D8F453D9F3E1C3D3E21C3EB28D44DD;PATH=/
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '225'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |
+        "Line Number","Message Type","Message"
+        "1","ERROR","Line Number 1: Data cannot be overwritten for this row since it has already been loaded by another vendor.  Please contact help@ltctrendtracker.com for further assistance."
+    http_version:
+  recorded_at: Thu, 13 Jun 2019 14:16:02 GMT
+- request:
+    method: get
+    uri: https://ltctt.ahcancal.org/api/status?FileUploadRequestId=d-CMXVFvnsnz0sS2S0r_hg==
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin18.5.0 x86_64) ruby/2.5.5p157
+      Authorization:
+      - Basic FAKE_AUTHORIZATION
+      Host:
+      - ltctt.ahcancal.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-cache="set-cookie"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 13 Jun 2019 14:48:37 GMT
+      Expires:
+      - '0'
+      Fileuploadfilename:
+      - Sample_CoreQ_LS_upload.csv
+      Fileuploadrequestid:
+      - d-CMXVFvnsnz0sS2S0r_hg==
+      Pragma:
+      - no-cache
+      Responsecode:
+      - SUCCESS
+      Responsedescription:
+      - File uploaded successfully.
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - AWSELB=BD75795F147148E52174EB2B2AA75585A537FC16EACD345E31BFF1CBBFB03C76CA3CB27AC7945C98953DD4012F6F098E320D7F6BF91A1D20C461611FA8F494E8C82A26C325;PATH=/
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"fileUploadRequestId":"d-CMXVFvnsnz0sS2S0r_hg==","fileName":"Sample_CoreQ_LS_upload.csv","responseCode":"SUCCESS","responseDescription":"File
+        uploaded successfully."}'
+    http_version:
+  recorded_at: Thu, 13 Jun 2019 14:48:37 GMT
+recorded_with: VCR 4.0.0

@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ltctt.ahcancal.org/api/status?FileUploadRequestId=INVALID_ID
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin18.5.0 x86_64) ruby/2.5.5p157
+      Authorization:
+      - Basic FAKE_AUTHORIZATION
+      Host:
+      - ltctt.ahcancal.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-cache="set-cookie"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 13 Jun 2019 14:26:16 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Responsecode:
+      - ERROR
+      Responsedescription:
+      - Invalid File Upload Request ID.
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - AWSELB=BD75795F147148E52174EB2B2AA75585A537FC16EACD345E31BFF1CBBFB03C76CA3CB27AC7945C98953DD4012F6F098E320D7F6BF91A1D20C461611FA8F494E8C82A26C325;PATH=/
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"fileUploadRequestId":null,"fileName":null,"responseCode":"ERROR","responseDescription":"Invalid
+        File Upload Request ID."}'
+    http_version:
+  recorded_at: Thu, 13 Jun 2019 14:26:16 GMT
+recorded_with: VCR 4.0.0

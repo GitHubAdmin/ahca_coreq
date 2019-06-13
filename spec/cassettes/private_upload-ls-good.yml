@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ltctt.ahcancal.org/api/upload-coreq
+    body:
+      encoding: ASCII-8BIT
+      string: "------RubyFormBoundarybB1bo3Ft7Q7R59Bs\r\nContent-Disposition: form-data;
+        name=\"file\"; filename=\"Sample_CoreQ_LS_upload.csv\"\r\nContent-Type: text/csv\r\n\r\nMedicare
+        Provider Number,Center Name,Year (Satisfaction Survey Date),Month (Satisfaction
+        Survey Date),Number of Respondents (Resident Survey Response),Response Rate
+        (Resident Survey Response),% of Residents Satisfied (Resident Survey Response),Number
+        of Respondents (Family Survey Response),Response Rate (Family Survey Response),%
+        of Families Satisfied (Family Survey Response)\r\n105140,Accentia,2015,1,148,0.815,0.189,17,0.115,0.447\r\n\r\n------RubyFormBoundarybB1bo3Ft7Q7R59Bs\r\nContent-Disposition:
+        form-data; name=\"file_upload_type\"\r\n\r\nCOREQ_LS\r\n------RubyFormBoundarybB1bo3Ft7Q7R59Bs--\r\n"
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin18.5.0 x86_64) ruby/2.5.5p157
+      Authorization:
+      - Basic FAKE_AUTHORIZATION
+      Content-Length:
+      - '738'
+      Content-Type:
+      - multipart/form-data; boundary=----RubyFormBoundarybB1bo3Ft7Q7R59Bs
+      Host:
+      - ltctt.ahcancal.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-cache="set-cookie"
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 13 Jun 2019 14:33:35 GMT
+      Expires:
+      - '0'
+      Fileuploadfilename:
+      - Sample_CoreQ_LS_upload.csv
+      Fileuploadrequestid:
+      - APFb5v1L3TcYi8UFM82lQg==
+      Pragma:
+      - no-cache
+      Responsecode:
+      - PROCESSING
+      Responsedescription:
+      - File upload is processing. Check the status via  File Upload Status Check
+        API call.
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - AWSELB=BD75795F147148E52174EB2B2AA75585A537FC16EA2ED6A099ECF8AAC55205A123D5573268868C3EE1AE58D447EC6C69EDBCB4D4C403D8F453D9F3E1C3D3E21C3EB28D44DD;PATH=/
+      - JSESSIONID=E5615921DCAF828150A84238807A2CD5; Path=/; Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"fileUploadRequestId":"APFb5v1L3TcYi8UFM82lQg==","fileName":"Sample_CoreQ_LS_upload.csv","responseCode":"PROCESSING","responseDescription":"File
+        upload is processing. Check the status via  File Upload Status Check API call."}'
+    http_version:
+  recorded_at: Thu, 13 Jun 2019 14:33:35 GMT
+recorded_with: VCR 4.0.0

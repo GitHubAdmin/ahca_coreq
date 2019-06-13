@@ -9,14 +9,14 @@ RSpec.describe AhcaCoreq do
 
   before :each do
     AhcaCoreq.configure do |config|
-      config.access_key = 'xyz'
+      config.username = 'xyz'
     end
   end
 
-  it "is configured to use the given access_key" do
+  it "is configured to use the given username" do
     client = AhcaCoreq::Client.new
 
-    expect(client.config.access_key).to eq('xyz')
+    expect(client.config.username).to eq('xyz')
   end
 
   after :each do

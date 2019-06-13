@@ -21,20 +21,20 @@ module AhcaCoreq
     end
 
     def private(options = {})
-      requires_api_keys
+      requires_authentication
       ::AhcaCoreq::Endpoints::Private.new(config, options)
     end
 
     private
 
-    def requires_api_keys
-      return unless api_keys_missing?
+    def requires_authentication
+      return unless auth_credentials_missing?
 
-      fail AhcaCoreq::MissingApiKeys, 'This feature requires API credentials.'
+      fail AhcaCoreq::MissingAuthCredentials, 'This feature requires API credentials.'
     end
 
-    def api_keys_missing?
-      !(config.access_key && config.secret_key)
+    def auth_credentials_missing?
+      !(config.username && config.password)
     end
 
     def set_config(params)
