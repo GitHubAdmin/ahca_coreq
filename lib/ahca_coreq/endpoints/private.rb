@@ -35,12 +35,19 @@ module AhcaCoreq
       # Request:
       #   Parameters (method: POST)
       #     request_id (required) : UbCtGLsSnVgo0qpDB_v-sQ==
-      # Response:
+      # Response: (with invalid upload data)
       # <CSV> [
       #   ["Line Number","Message Type","Message"],
       #   ["1","ERROR","Line Number 1: The value '000001' in ""Medicare Provider Number"" does not match a value in the system. Please confirm the value and re-upload the file. If the value you entered is correct but generates this error, please contact help@ltctrendtracker.com for assistance."],
       #   ["2","ERROR","Line Number 2: The value '000002' in ""Medicare Provider Number"" does not match a value in the system. Please confirm the value and re-upload the file. If the value you entered is correct but generates this error, please contact help@ltctrendtracker.com for assistance."]
       # ]
+      # Response: (with valid upload data)
+      #   {
+      #     "fileUploadRequestId": "d-CMXVFvnsnz0sS2S0r_hg==",
+      #     "fileName": "Sample_CoreQ_LS_upload.csv",
+      #     "responseCode": "SUCCESS",
+      #     "responseDescription": "File uploaded successfully."
+      #   }
       def status(rid)
         resp = sget("status", {"FileUploadRequestId" => rid})
         begin
