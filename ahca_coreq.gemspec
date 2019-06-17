@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "ahca_coreq/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "AHCACoreQ"
+  spec.name          = "AhcaCoreq"
   spec.version       = AhcaCoreq::VERSION
   spec.authors       = ["Phil Doise"]
   spec.email         = ["phil.doise@healthstream.com"]
 
   spec.summary       = %q{Gem for communicating with AHCA API}
   spec.description   = %q{}
-  spec.homepage      = "https://github.com/github_admin/ahca_coreq.git"
+  spec.homepage      = "https://github.com/GitHubAdmin/ahca_coreq.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
