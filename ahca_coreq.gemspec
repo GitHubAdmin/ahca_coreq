@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "ahca_coreq/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "AhcaCoreq"
+  spec.name          = "ahca_coreq"
   spec.version       = AhcaCoreq::VERSION
   spec.authors       = ["Phil Doise"]
   spec.email         = ["phil.doise@healthstream.com"]
