@@ -13,7 +13,12 @@ module AhcaCoreq
       def sget(endpoint, params = {})
         url = geturl(endpoint, params)
         begin
-          RestClient.get(url, headers, verify_ssl: false)
+          client = RestClient::Resource.new(
+            url,
+            headers: headers,
+            verify_ssl: false
+          )
+          client.get()
         rescue RestClient::ExceptionWithResponse => e
           e.response
         end
@@ -23,7 +28,12 @@ module AhcaCoreq
       def sfilepost(endpoint, type, file)
         url = posturl(endpoint)
         begin
-          RestClient.post(url, payload(type, file), headers, verify_ssl: false)
+          client = RestClient::Resource.new(
+            url,
+            headers: headers,
+            verify_ssl: false
+          )
+          client.post(payload(type, file))
 
         rescue RestClient::ExceptionWithResponse => e
           e.response
