@@ -1,5 +1,5 @@
 # docker build --progress=plain -t local/services_tools:latest .
-FROM ruby:2.6.10-buster
+FROM ruby:3.0.0-buster
 
 RUN apt-get update -qq && \
   apt-get install -y vim \

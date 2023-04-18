@@ -13,7 +13,7 @@ module AhcaCoreq
       def sget(endpoint, params = {})
         url = geturl(endpoint, params)
         begin
-          RestClient.get(url, headers)
+          RestClient.get(url, headers, verify_ssl: false)
         rescue RestClient::ExceptionWithResponse => e
           e.response
         end
@@ -23,7 +23,7 @@ module AhcaCoreq
       def sfilepost(endpoint, type, file)
         url = posturl(endpoint)
         begin
-          RestClient.post(url, payload(type, file), headers)
+          RestClient.post(url, payload(type, file), headers, verify_ssl: false)
 
         rescue RestClient::ExceptionWithResponse => e
           e.response
@@ -34,7 +34,7 @@ module AhcaCoreq
 
       def headers
         {
-          authorization: 'Basic ' + Base64.encode64("#{@config.username}:#{@config.password}").chomp
+          authorization: 'Basic ' + Base64.encode64("#{@config.username}:#{@config.password}").chomp,
         }
       end
 
